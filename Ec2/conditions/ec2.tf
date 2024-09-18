@@ -3,7 +3,6 @@ resource "aws_security_group" "allow-ssh-terraform"  {
   description = var.sg_description
    tags = var.tags
 
-
 # ingress means incoming traffic
 #eggress is outgoing traffic
   egress {
@@ -23,14 +22,14 @@ resource "aws_security_group" "allow-ssh-terraform"  {
   }
 
   
-
+}
 resource "aws_instance" "terraforminstance" {
   ami                     = var.ami_id
-  instance_type           = var.instance_type
+  instance_type           = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow-ssh-terraform.id]
    tags = var.tags
  }
 
-}
+
 
  
