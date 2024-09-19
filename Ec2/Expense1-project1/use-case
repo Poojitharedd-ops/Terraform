@@ -1,0 +1,4 @@
+create 3 ec2 instances and 3 R53 records
+backend.poojitha.online-->t3.micro
+mysql.poojitha.online-->t3.small
+for frontend-->poojitha.online-->t3.micro
