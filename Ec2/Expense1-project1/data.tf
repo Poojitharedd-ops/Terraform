@@ -1,7 +1,6 @@
-data "ami_aws" "amiinfo" {
+ data "aws_ami" "ami_info" {
+most_recent      = true
 
- most_recent      = true
-  owners = ["654654279041"]
   
 
   filter {
